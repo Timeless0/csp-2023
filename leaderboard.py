@@ -59,17 +59,18 @@ def update_leaderboard(file_name, leader_names, leader_scores,  player_name, pla
 
   index = 0
   # TODO 8: loop through all the scores in the existing leaderboard list
-  '''
-  for   :
+  
+  for index in range(len(leader_names)):
     # TODO 9: check if this is the position to insert new score at
-    if ():
+    if (player_score>= leader_scores[index]):
       break
     else:
       index = index + 1
-  '''
+  
   
   # TODO 10: insert new player and score
-
+  scores.insert(index, player_score)
+  names.insert(index, player_name)
   # TODO 11: keep both lists at 5 elements only (top 5 players)
   
   # TODO 12: store the latest leaderboard back in the file
