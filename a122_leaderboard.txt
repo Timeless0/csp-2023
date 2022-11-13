@@ -1,3 +1,5 @@
-pat,50
-jack,42
-darwin,45
+pat,5
+jack,2
+darwin,4
+sarah, 4
+tommy, 6
