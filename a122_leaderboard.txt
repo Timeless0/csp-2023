@@ -1,5 +1,5 @@
 pat,5
 jack,2
 darwin,4
-sarah, 4
+sarah, 3
 tommy, 6
