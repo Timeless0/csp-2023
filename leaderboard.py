@@ -112,12 +112,11 @@ def draw_leaderboard(high_scorer, leader_names, leader_scores, turtle_object, pl
   turtle_object.pendown()
 
   # TODO 14: display message about player making/not making leaderboard
-  if lb.draw_leaderboard(True, spot, score):
-    turtle_object.write("Congratulations!\nYou made the leaderboard!", font=font_setup)
+  if high_scorer:
+    turtle_object.write("Congratulations! You made the leaderboard!", font=font_setup)
   else:
-    turtle_object.write("Sorry!\nYou didn't make the leaderboard.\nMaybe next time!", font=font_setup)
+    turtle_object.write("Sorry! You didn't make the leaderboard. Maybe next time!", font=font_setup)
   
-
   # move turtle to a new line
   turtle_object.penup()
   turtle_object.goto(-160,int(turtle_object.ycor())-50)
