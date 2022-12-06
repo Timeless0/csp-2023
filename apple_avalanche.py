@@ -9,28 +9,26 @@ wn.setup(width=1.0, height=1.0)
 wn.addshape(apple_image) # Make the screen aware of the new file
 wn.bgpic("background.gif")
 
-apple_list= []
-apple = trtl.Turtle()
-apple_list.append(apple)
-apple = trtl.Turtle()
-apple_list.append(apple)
-apple = trtl.Turtle()
-apple_list.append(apple)
-apple = trtl.Turtle()
-apple_list.append(apple)
-apple = trtl.Turtle()
-apple_list.append(apple)
-
-
-
-
-letter_list=[]
-letter=trtl.Turtle()
 alphabet=("a","s","d","f","g","h","j","k","l")
-selected_letter= alphabet[rand.randint(0, 8)]
-letter_list.append(letter)
+apple_list= []
+letter_list=[]
+
+
+# add apple to list 5 times
+for i in range(5):
+  apple = trtl.Turtle()
+  apple_list.append(apple)
+  #have 5 random letters
+  selected_letter= alphabet[rand.randint(0, 8)]
+  letter_list.append(selected_letter)
+
+
 letter=trtl.Turtle()
-letter_list.append(letter)
+
+
+
+
+
 #-----functions-----
 # given a turtle, set that turtle to be shaped by the image file
 def draw_apple(active_apple):
@@ -41,7 +39,7 @@ def draw_apple(active_apple):
   apple_list[3].goto(60,100)
   apple_list[4].goto(-30,50)
   wn.update()
-
+  
 def fall():
   apple.setx(0)
   apple.sety(0)
@@ -53,7 +51,7 @@ def fall():
   apple_list.pop(apple)
   letter_list.pop(letter)
 
-def draw_random(selected_letter):
+def draw_random(letter_list):
   if (apple in apple_list):
     
     letter.penup()
@@ -61,7 +59,7 @@ def draw_random(selected_letter):
     letter.setx(120)
     letter.sety(80)
     letter.color("red")
-    letter.write(selected_letter, font=("Arial", 70, "bold"))
+    letter.write(rand.choice(letter_list), font=("Arial", 70, "bold"))
   
 #-----function calls-----
 draw_apple(apple_list[0])
@@ -70,8 +68,8 @@ draw_apple(apple_list[2])
 draw_apple(apple_list[3])
 draw_apple(apple_list[4])
 
-for apple in apple_list:
-  draw_random(selected_letter)
+for i in range(5):
+  draw_random(letter_list)
   wn.onkeypress(fall)
   wn.listen()
 
