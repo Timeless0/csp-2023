@@ -45,7 +45,7 @@ def duck_shape(selected_duck):
     duck.begin_fill()
     duck.circle(20)
     duck.end_fill()
-    '''duck.goto(rand(-150,0),rand(0,150))'''
+    duck.goto(rand.randint(-150,0),rand.randint(0,150))
     duck.showturtle()
 
 #function calls
