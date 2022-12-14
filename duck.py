@@ -72,11 +72,11 @@ def victor():
    toms_points=5
    if points>toms_points:
        print ("you passed toms points")
-
-def timer():
+#working on clock
+'''def timer():
     time=10
     clock = trtl.Turtle()
-    clock.sety(120)
+    clock.sety(120)'''
 
 
 #clock
